@@ -1,6 +1,6 @@
 # Deploy and Host Chatwoot on Railway
 
-[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/MSjkSW?utm_medium=integration&utm_source=button&utm_campaign=chatwoot)
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/chatwoot-3?utm_medium=integration&utm_source=button&utm_campaign=chatwoot)
 
 [Chatwoot](https://www.chatwoot.com/) is the open-source customer support platform: a shared inbox for email, website live chat, WhatsApp, Instagram, Telegram and more, with automations, canned responses, CSAT surveys, and Captain AI — a self-hosted alternative to Intercom and Zendesk.
 
