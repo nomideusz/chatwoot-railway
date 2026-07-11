@@ -9,6 +9,10 @@ ENV RAILS_ENV=production \
     RAILS_LOG_TO_STDOUT=true \
     ACTIVE_STORAGE_SERVICE=s3_compatible \
     STORAGE_FORCE_PATH_STYLE=false \
-    DEFAULT_LOCALE=en
+    DEFAULT_LOCALE=en \
+    POSTGRES_USERNAME=postgres \
+    POSTGRES_DATABASE=chatwoot \
+    ENABLE_ACCOUNT_SIGNUP=true \
+    STORAGE_REGION=auto
 
 CMD ["bundle", "exec", "rails", "s", "-p", "3000", "-b", "::"]

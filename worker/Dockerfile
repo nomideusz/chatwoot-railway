@@ -6,6 +6,10 @@ ENV RAILS_ENV=production \
     INSTALLATION_ENV=docker \
     RAILS_LOG_TO_STDOUT=true \
     ACTIVE_STORAGE_SERVICE=s3_compatible \
-    STORAGE_FORCE_PATH_STYLE=false
+    STORAGE_FORCE_PATH_STYLE=false \
+    POSTGRES_USERNAME=postgres \
+    POSTGRES_DATABASE=chatwoot \
+    ENABLE_ACCOUNT_SIGNUP=true \
+    STORAGE_REGION=auto
 
 CMD ["bundle", "exec", "sidekiq", "-C", "config/sidekiq.yml"]
