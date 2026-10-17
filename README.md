@@ -38,8 +38,8 @@ Service map:
 
 | Service | Image | Role |
 |---|---|---|
-| web | `chatwoot/chatwoot:v4.15.1` | Rails app + ActionCable, public domain; runs `rails db:chatwoot_prepare` pre-deploy |
-| worker | `chatwoot/chatwoot:v4.15.1` (CMD sidekiq) | Background jobs: mail, automations, campaigns |
+| web | `chatwoot/chatwoot:v4.18.0` | Rails app + ActionCable, public domain; runs `rails db:chatwoot_prepare` pre-deploy |
+| worker | `chatwoot/chatwoot:v4.18.0` (CMD sidekiq) | Background jobs: mail, automations, campaigns |
 | postgres | `pgvector/pgvector:pg16` | Database + vector store (Captain AI), on a volume |
 | redis | `redis:7-alpine` | Sidekiq queues + ActionCable pubsub (append-only, on a volume) |
 
