@@ -6,9 +6,9 @@
 
 ## Screenshots
 
-![Chatwoot](https://raw.githubusercontent.com/nomideusz/chatwoot-railway/main/images/03.png)
+![Chatwoot](https://raw.githubusercontent.com/two-workspaces/chatwoot/main/images/03.png)
 
-![Chatwoot shared inbox with omnichannel conversations](https://raw.githubusercontent.com/nomideusz/chatwoot-railway/main/images/02.png)
+![Chatwoot shared inbox with omnichannel conversations](https://raw.githubusercontent.com/two-workspaces/chatwoot/main/images/02.png)
 
 ## About Hosting Chatwoot
 
@@ -28,7 +28,7 @@ Chatwoot v4 is a Rails application with a real background-job tier. This templat
 ### Deployment Dependencies
 
 - [Chatwoot self-hosted documentation](https://www.chatwoot.com/docs/self-hosted)
-- [Template source on GitHub](https://github.com/nomideusz/chatwoot-railway)
+- [Template source on GitHub](https://github.com/two-workspaces/chatwoot)
 
 ### Implementation Details
 
