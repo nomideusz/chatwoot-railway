@@ -38,8 +38,8 @@ Service map:
 
 | Service | Image | Role |
 |---|---|---|
-| web | `chatwoot/chatwoot:v4.18.0` | Rails app + ActionCable, public domain; runs `rails db:chatwoot_prepare` pre-deploy |
-| worker | `chatwoot/chatwoot:v4.18.0` (CMD sidekiq) | Background jobs: mail, automations, campaigns |
+| web | `chatwoot/chatwoot:v4.19.0` | Rails app + ActionCable, public domain; runs `rails db:chatwoot_prepare` pre-deploy |
+| worker | `chatwoot/chatwoot:v4.19.0` (CMD sidekiq) | Background jobs: mail, automations, campaigns |
 | postgres | `pgvector/pgvector:pg16` | Database + vector store (Captain AI), on a volume |
 | redis | `redis:7-alpine` | Sidekiq queues + ActionCable pubsub (append-only, on a volume) |
 
@@ -54,7 +54,7 @@ Notes and limits:
 
 - Rails binds `::` (dual-stack) in the web Dockerfile — required for Railway's IPv6 networking.
 - Without SMTP variables (`MAILER_SENDER_EMAIL`, `SMTP_*`), password resets and email notifications are silently skipped; live chat and agent workflows work regardless.
-- Captain AI features need an OpenAI-compatible key added in Chatwoot's super-admin console; pgvector is already enabled for it.
+- Captain AI features need an OpenAI-compatible key added in Chatwoot's super-admin console; pgvector is already enabled for it. Since v4.19 Captain runs V2 only: if you used Captain V1 instructions on an older deploy, migrate them before taking this update ([guide](https://github.com/chatwoot/chatwoot/blob/v4.19.0/docs/captain_v1_sunset.md)).
 - Scale the `worker` service replicas if campaign sends or automations queue up.
 
 ## Why Deploy Chatwoot on Railway?

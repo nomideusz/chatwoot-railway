@@ -1,4 +1,4 @@
-FROM chatwoot/chatwoot:v4.18.0
+FROM chatwoot/chatwoot:v4.19.0
 
 # Sidekiq: emails, automations, campaign sends, webhook delivery.
 ENV RAILS_ENV=production \
