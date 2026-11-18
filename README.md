@@ -32,14 +32,14 @@ Chatwoot v4 is a Rails application with a real background-job tier. This templat
 
 ### Implementation Details
 
-**Your Chatwoot URL is the `web` service's domain.** First visit shows the signup page — the first account created is the instance owner. Set `ENABLE_ACCOUNT_SIGNUP=false` on both `web` and `worker` afterwards to close public registration.
+**Your Chatwoot URL is the `web` service's domain.** First visit opens the setup page, where you create the instance owner (super admin) and the first account. Set `ENABLE_ACCOUNT_SIGNUP=false` on both `web` and `worker` afterwards to close public registration.
 
 Service map:
 
 | Service | Image | Role |
 |---|---|---|
-| web | `chatwoot/chatwoot:v4.19.1` | Rails app + ActionCable, public domain; runs `rails db:chatwoot_prepare` pre-deploy |
-| worker | `chatwoot/chatwoot:v4.19.1` (CMD sidekiq) | Background jobs: mail, automations, campaigns |
+| web | `chatwoot/chatwoot:v4.20.0` | Rails app + ActionCable, public domain; runs `rails db:chatwoot_prepare` pre-deploy |
+| worker | `chatwoot/chatwoot:v4.20.0` (CMD sidekiq) | Background jobs: mail, automations, campaigns |
 | postgres | `pgvector/pgvector:pg16` | Database + vector store (Captain AI), on a volume |
 | redis | `redis:7-alpine` | Sidekiq queues + ActionCable pubsub (append-only, on a volume) |
 
